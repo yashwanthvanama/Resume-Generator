@@ -1,0 +1,90 @@
+\documentclass[a4paper,11pt]{article}
+% Resume template for software engineer position
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{fontspec}
+
+% Set up fonts for better typography
+\setmainfont{Times New Roman}
+
+% Customize section formatting to match original with horizontal lines
+\titleformat{\section}{\Large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+% Customize subsection formatting
+\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+\titlespacing{\subsection}{0pt}{4pt}{2pt}
+
+% Remove paragraph indentation and set compact spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+
+% Customize itemize spacing for compact layout
+\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=0pt,partopsep=0pt}
+
+\begin{document}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Header section with compact layout
+\begin{center}
+    {\Huge \textbf{YASHWANTH VANAMA}} \\
+    \vspace{1pt}
+    \href{mailto:Vanamayashwanth2@gmail.com}{Vanamayashwanth2@gmail.com} \quad | \quad
+    7652258375 \quad | \quad
+    \href{https://github.com/yashwanthvanama}{github.com} \quad | \quad
+    \href{https://leetcode.com/u/yashwanthvanama/}{leetcode.com}
+\end{center}
+
+\vspace{2pt}
+
+\section*{Professional Summary}
+Software Engineer with 3+ years of experience in full-stack development. Proven track record of leading teams, delivering scalable solutions, and driving measurable business outcomes such as increasing revenue by \$2.4M and cutting operational delays by thousands of hours.
+
+\section*{Work Experience}
+
+\subsection{Software Development Engineer | Cognizant Technology Solutions | Jul 2020 – Jul 2023 | Aug 2025 – Present}
+\begin{itemize}
+    \item Proposed a high-level design for a fit-gap analysis of processes of two organizations and their revenue process and systems. Created a seamless system and process integration proposal, resulting in Cognizant securing a \$700K implementation project.
+    \item Built a dynamic B2B quoting interface with React + TypeScript, reducing quote creation time from 10 mins to 6 mins and enabling 500+ quotes/day processing.
+    \item Built an AI-driven product recommendation engine using Python, pandas, scikit-learn, and FP-Growth (from mlxtend) to mine association rules from 100K+ past orders, generating real-time upsell/cross-sell suggestions and increasing average order value by \$1,200.
+    \item Developed a Node.js + Express backend to manage pricing workflows and approvals, cutting quote-to-order processing from 3 days to 1 day.
+    \item Created a GPT-powered live chat support agent using LangChain and OpenAI, integrated with support center via Node.js, resolving 2,000+ monthly queries and cutting resolution times from 8 hrs to 4 hrs.
+    \item Optimized database performance by designing and tuning queries in MongoDB and Oracle, reducing average query latency by 35\% and improving system throughput to handle 10K+ transactions per minute across enterprise applications.
+    \item Implemented CI/CD pipelines with GitHub Actions and Docker, delivering 20+ releases/year with near-zero rollback incidents.
+\end{itemize}
+
+\section*{Projects}
+
+\subsection{AutoCV | Python, Llama 3.1, Ollama, Selenium, LaTeX, LangGraph | May 2025}
+\begin{itemize}
+    \item Designed and implemented AutoCV, an agentic AI system that autonomously tailors resumes to job descriptions by orchestrating multiple specialized agents.
+    \item Developed a Web Scraper Agent and a Parsing and Keyword Extraction Agent that sends job text to a locally hosted Llama 3.1 LLM on Ollama, leveraging LangGraph for reasoning, planning, and memory management.
+    \item Reduced manual resume tailoring time from 30 minutes to under 2 minutes, enabling rapid, high-volume job applications.
+\end{itemize}
+
+\subsection{MoveMaster | Python, PyTorch, ChessBench dataset, Transformers, FastAPI | Jun 2024}
+\begin{itemize}
+    \item Led development of MoveMaster, an AI engine that predicts the optimal next move in a two-player strategy game (chess) by leveraging historical move sequences.
+    \item Fine-tuned a pre-trained transformer architecture inspired by the "ChessFormer" model, adapting its expressive position-aware attention mechanism for accurate next-move prediction.
+    \item Deployed MoveMaster as a FastAPI service, enabling seamless integration with game interfaces for real-time inference.
+    \item Outperformed baseline Minimax rule-based AI by 78\%-win rate over 500 simulated matches.
+\end{itemize}
+
+\section*{Education}
+\textbf{Indiana University – Bloomington | MS | Aug 2023 - May 2025}\\
+\textbf{Jawaharlal Nehru Technological University Hyderabad | B. Tech | Aug 2016 – May 2020}
+
+\section*{Skills}
+\textbf{Languages \& Scripting:} Python, C, C++, Java, HTML, CSS, JavaScript, TypeScript, SQL \\
+\textbf{Frameworks \& Libraries:} React.js, Node.js, Next.js, Express.js, Pandas, Scikit-Learn, PyTorch, TensorFlow, 
+KubeFlow/MLFlow, HuggingFace, LangChain, ADK, AutoGen\\
+\textbf{Tools \& Platforms:} Selenium, Docker, GitHub, AWS, Kubernetes, GitHub Copilot, ChatGPT, Claude, Cursor \\
+\textbf{Methodologies \& Concepts:} Agile, SDLC, Test Driven Development, System Design, Debugging, DSA
+
+\end{document} 
