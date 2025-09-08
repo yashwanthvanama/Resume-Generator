@@ -50,5 +50,16 @@ Thumbs.db
 *.swo
 *~
 
-# Output files (optional - you might want to keep these)
-# output/*.pdf 
+# Output PDFs (generated)
+output/*.pdf
+output/*.pdf.gz
+
+# Keep a placeholder if directory is empty
+!output/.gitkeep
+
+# Ignore all template source and generated files (do not track .tex or PDFs)
+templates/*
+!templates/.gitkeep
+
+# Prevent tracking of local watcher logs if any
+watcher.log
