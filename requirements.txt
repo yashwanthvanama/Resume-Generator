@@ -10,3 +10,5 @@ watchdog==2.1.6
 # Additional packages that might be useful for future enhancements
 # (uncomment if needed)
 # pathlib2==2.3.7  # Enhanced pathlib functionality (if needed for older Python versions)
+requests==2.32.3
+python-dotenv==1.0.1

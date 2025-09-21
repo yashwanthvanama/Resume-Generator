@@ -87,6 +87,40 @@ python src/compile_resume.py yashwanth_resume_salesforce_administrator
 
 The compiled PDF will be saved in the `output/` directory with the same name as the template.
 
+## Firecrawl: Scrape Job Postings
+
+You can fetch the content of a job posting page using Firecrawl's Scrape API and print it to your terminal.
+
+### Prerequisites
+
+1. Copy `.env.example` to `.env` and put your API key in it:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and set:
+
+```
+FIRECRAWL_API_KEY=your_api_key_here
+```
+
+Alternatively, you can export it in your shell:
+
+```bash
+export FIRECRAWL_API_KEY=your_api_key_here
+```
+
+### Run the scraper (prints to stdout)
+
+```bash
+python -m src.scrape_job_posting "https://example.com/jobs/12345"
+```
+
+Optional flag:
+
+- `--only-main-content` attempt to extract just the core content
+
 ## Project Structure
 
 ```
