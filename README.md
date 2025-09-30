@@ -1,6 +1,6 @@
 # Resume Generator
 
-A Python script to compile LaTeX resume templates into PDF format.
+A Python script to compile LaTeX files into PDF format.
 
 ## Prerequisites
 
@@ -72,20 +72,18 @@ sudo tlmgr install enumitem titlesec hyperref xcolor fontspec
 ### Running the Resume Compiler
 
 #### Interactive Mode
-Run the script without arguments to see available templates and choose one:
+Run the script without arguments to see available files and choose one:
 ```bash
 python src/compile_resume.py
 ```
 
 #### Command Line Mode
-Specify the template name as an argument:
+Specify the file name as an argument:
 ```bash
-python src/compile_resume.py yashwanth_resume_software_engineer
-python src/compile_resume.py yashwanth_resume_salesforce_developer
-python src/compile_resume.py yashwanth_resume_salesforce_administrator
+python src/compile_resume.py your_resume_file
 ```
 
-The compiled PDF will be saved in the `output/` directory with the same name as the template.
+The compiled PDF will be saved in the `output/` directory with the same name as the input file.
 
 ## Firecrawl: Scrape Job Postings
 
@@ -127,10 +125,7 @@ Optional flag:
 Resume Generator/
 ├── src/
 │   └── compile_resume.py           # Main compilation script
-├── templates/
-│   ├── yashwanth_resume_software_engineer.tex      # Software Engineer template
-│   ├── yashwanth_resume_salesforce_developer.tex   # Salesforce Developer template
-│   └── yashwanth_resume_salesforce_administrator.tex # Salesforce Administrator template
+├── templates/                      # LaTeX template files
 ├── original_resume/         # Original PDF resumes
 ├── output/                  # Generated PDF files
 ├── venv/                    # Python virtual environment
@@ -142,15 +137,13 @@ Resume Generator/
 ## Features
 
 - **Automated LaTeX Compilation**: Automatically compiles LaTeX files to PDF
-- **Multiple Resume Templates**: Three specialized templates for different job types
 - **Clean Output Management**: Saves output to a dedicated directory and cleans up auxiliary files
 - **Virtual Environment Support**: Isolated Python environment with all dependencies
 - **Error Handling**: Comprehensive error messages and fallback options
-- **Live Template Watching**: Optional watcher script automatically recompiles a template when you save changes to a `.tex` file
 
 ## Live Watching (Auto-Compile on Save)
 
-You can enable automatic recompilation of resumes whenever you save a template in the `templates/` directory using the watcher script.
+You can enable automatic recompilation whenever you save a LaTeX file in the `templates/` directory using the watcher script.
 
 ### Install Dependency (if not already installed)
 `watchdog` is already listed in `requirements.txt`, so if you've installed dependencies you're set:
@@ -198,32 +191,13 @@ Adjust debounce timing inside `TemplateHandler` if needed.
 If you encounter issues:
 
 1. **LaTeX not found**: Follow the installation instructions above
-2. **Compilation errors**: Check your LaTeX syntax in the template file
+2. **Compilation errors**: Check your LaTeX syntax in the file
 3. **Permission errors**: Ensure you have write permissions in the output directory
-
-## Available Templates
-
-The project includes three specialized resume templates:
-
-1. **Software Engineer** (`yashwanth_resume_software_engineer.tex`)
-   - Focuses on full-stack development experience
-   - Includes projects section with technical projects
-   - Emphasizes general software engineering skills
-
-2. **Salesforce Developer** (`yashwanth_resume_salesforce_developer.tex`)
-   - Specialized for Salesforce development roles
-   - Highlights Apex, LWC, and Salesforce-specific technologies
-   - Includes Salesforce certifications section
-
-3. **Salesforce Administrator** (`yashwanth_resume_salesforce_administrator.tex`)
-   - Tailored for Salesforce administration positions
-   - Emphasizes configuration, automation, and user management
-   - Focuses on declarative development and system administration
 
 ## Customization
 
-To add a new resume template:
+To add a new LaTeX file:
 
 1. Create a new `.tex` file in the `templates/` directory
-2. Follow the existing template structure and styling
-3. Run the script with your template name as an argument 
+2. Follow standard LaTeX structure and styling
+3. Run the script with your file name as an argument 
